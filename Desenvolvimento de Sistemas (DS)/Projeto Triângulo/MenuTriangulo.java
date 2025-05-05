@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.mycompany.calculo_de_triangulo;
 
 import javax.swing.*;
@@ -6,8 +10,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-    
-
+/**
+ *
+ * @author migue
+ */
 public class MenuTriangulo extends JFrame {
 
     private Triangulo triangulo = new Triangulo();
@@ -20,9 +26,8 @@ public class MenuTriangulo extends JFrame {
      JTextArea displayArea;
      JTextField inputField;
      
+ 
      
-     
-
     public MenuTriangulo() {
         setTitle("Menu de Triângulo");
         setSize(500, 400);
@@ -34,9 +39,9 @@ public class MenuTriangulo extends JFrame {
            
         // Título no topo, fora do painel de opções
 JLabel titulo = new JLabel("Menu Triângulo", SwingConstants.CENTER);
-Color corRGB = new Color(2,255,204); // Roxo
+Color corRGB = new Color(0,0,255); // Azul
 titulo.setForeground(corRGB);
-titulo.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
+titulo.setFont(new Font("Segoe UI Black", Font.BOLD, 24));
 
 // Painel para o título (separado)
 JPanel tituloPanel = new JPanel(new BorderLayout());
@@ -47,7 +52,7 @@ tituloPanel.add(titulo, BorderLayout.CENTER);
 // Adicionando o título ao painel superior
 JPanel menuPanel = new JPanel();
 menuPanel.setLayout(new BorderLayout());  // ou FlowLayout
-menuPanel.setBackground(new Color(255,153,153));
+menuPanel.setBackground(new Color(153,204,255));
 menuPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
 menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
@@ -61,7 +66,7 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
                 "4 - Calcular Perímetro<br>" +
                 "5 - Calcular Área<br>" +
                 "0 - Fechar</html>");
-        menuLabel.setFont(new Font("Dubai Medium", Font.PLAIN, 14));
+        menuLabel.setFont(new Font("Dubai Medium", Font.PLAIN, 15));
         menuLabel.setForeground(Color.WHITE);
         menuPanel.add(menuLabel);
         
@@ -70,15 +75,15 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         // Painel de entrada
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new FlowLayout());
-        inputPanel.setBackground(new Color(102,153,255));
+        inputPanel.setBackground(new Color(255,204,204));
+        
 
         inputField = new JTextField();
-        inputField.setFont(new Font("SansSerif", Font.PLAIN, 17));
+        inputField.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 14));
         inputField.setPreferredSize(new Dimension(60, 20));
         inputField.setBounds(23, 23, 23, 23);
 
         JButton submitButton = new JButton("OK");
-        submitButton.setFont(new Font("SansSerif", Font.BOLD, 14));
         submitButton.setBackground(new Color(100, 149, 237));
         submitButton.setForeground(Color.WHITE);
         submitButton.setFocusPainted(false);
@@ -94,7 +99,8 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         });
         
         inputPanel.add(new JLabel("Digite o número da opção:"));
-        inputPanel.setFont(new Font("Corbel", Font.PLAIN, 2));
+        submitButton.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 14));
+        
         inputPanel.add(inputField);
         inputPanel.add(submitButton);
         
@@ -105,7 +111,7 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         displayArea.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 13));
         displayArea.setBackground(new Color(230, 230, 250));
         JScrollPane scrollPane = new JScrollPane(displayArea);
-        scrollPane.setPreferredSize(new Dimension(480, 100));
+        scrollPane.setPreferredSize(new Dimension(480, 80));
         scrollPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         // Adiciona à janela
@@ -183,4 +189,4 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
     private boolean ladosCadastrados() {
         return triangulo.getLado1() > 0 && triangulo.getLado2() > 0 && triangulo.getLado3() > 0;
     }
-}  
+}
