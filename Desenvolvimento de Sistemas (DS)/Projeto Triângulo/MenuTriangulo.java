@@ -2,21 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.calculo_de_triangulo;
+package com.mycompany.projeto_de_triangulo;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 /**
  *
- * @author migue
+ * @author Admin
  */
 public class MenuTriangulo extends JFrame {
-
-    private Triangulo triangulo = new Triangulo();
+    
+     private Triangulo triangulo = new Triangulo();
     private ConversorNumeros conversor = new ConversorNumeros();
     private EntradaSaidaDados io = new EntradaSaidaDados();
     private int opcao;  // Armazena a opção escolhida
@@ -57,7 +56,6 @@ menuPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
 menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         
-        
 
         JLabel menuLabel = new JLabel("<html>Escolha uma opção:<br>" +
                 "1 - Cadastrar Lados<br>" +
@@ -84,7 +82,7 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         inputField.setBounds(23, 23, 23, 23);
 
         JButton submitButton = new JButton("OK");
-        submitButton.setBackground(new Color(100, 149, 237));
+        submitButton.setBackground(new Color(255,102,102));
         submitButton.setForeground(Color.WHITE);
         submitButton.setFocusPainted(false);
 
@@ -189,4 +187,5 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
     private boolean ladosCadastrados() {
         return triangulo.getLado1() > 0 && triangulo.getLado2() > 0 && triangulo.getLado3() > 0;
     }
+    
 }
