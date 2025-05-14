@@ -12,6 +12,7 @@
  
      public static void main(String[] args) {
              
+         MenuTriangulo menu = new MenuTriangulo();
          new MenuTriangulo();
          
          

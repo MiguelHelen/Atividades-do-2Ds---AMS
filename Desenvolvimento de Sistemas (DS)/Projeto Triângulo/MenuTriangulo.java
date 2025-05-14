@@ -102,7 +102,7 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
         displayArea.setBackground(new Color(153, 255, 204));
         JScrollPane scrollPane = new JScrollPane(displayArea);
         scrollPane.setPreferredSize(new Dimension(480, 80));
-        scrollPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        scrollPane.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         add(menuPanel, BorderLayout.NORTH);
         add(inputPanel, BorderLayout.CENTER);
@@ -159,8 +159,8 @@ menuPanel.add(titulo, BorderLayout.NORTH);  // Adiciona o título
                 }
                 break;
             case 0:
-                displayArea.setText("Encerrando o programa...");
-                dispose();
+                JOptionPane.showMessageDialog(this, "Encerrando o programa...");
+    dispose(); // Fecha a janela
                 break;
             default:
                 displayArea.setText("Opção inválida! Digite um número entre 0 e 5.");
