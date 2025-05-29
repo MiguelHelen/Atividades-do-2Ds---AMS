@@ -1,15 +1,17 @@
 <?php
 require_once("banco.php");
 
+// Define uma classe chamada Cadastro que herda a funcionalidade da classe Banco
 class Cadastro extends Banco {
 
+    // Declara variáveis privadas para armazenar os dados do cadastro
     private $nome;
     private $telefone;
     private $origem;
     private $data_contato;
     private $observacao;
 
-    //Metodos Set
+    // Métodos SET: são funções que definem (guardam) os valores nas variáveis privadas
     public function setNome($string){
         $this->nome = $string;
     }
@@ -26,7 +28,7 @@ class Cadastro extends Banco {
         $this->observacao = $string;
     }
 
-    //Metodos Get
+    // Métodos GET: são funções que retornam (mostram) os valores armazenados nas variáveis privadas
     public function getNome(){
         return $this->nome;
     }
@@ -43,8 +45,10 @@ class Cadastro extends Banco {
         return $this->observacao;
     }
 
+    // Método que chama um método da classe pai para salvar os dados no banco de dados
     public function incluir(){
-        return $this->setAgendamentos($this->getNome(),$this->getTelefone(),$this->getOrigem(),$this->getData_contato(),$this->getObservacao());
+        // Passa os dados armazenados para o método setAgendamentos da classe Banco 
+        return $this->setAgendamentos($this->getNome(), $this->getTelefone(), $this->getOrigem(), $this->getData_contato(), $this->getObservacao());
     }
 }
 ?>
