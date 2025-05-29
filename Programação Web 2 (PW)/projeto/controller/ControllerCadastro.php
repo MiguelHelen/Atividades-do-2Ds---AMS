@@ -1,8 +1,7 @@
 <?php
-// Importa o arquivo que contém a classe Cadastro, que cuida de salvar os dados no banco
+
 require_once("../model/cadastro.php");
 
-// Esta é a classe que controla o processo de cadastro
 class cadastroController{
 
     // Cria uma variável para guardar a classe de cadastro
