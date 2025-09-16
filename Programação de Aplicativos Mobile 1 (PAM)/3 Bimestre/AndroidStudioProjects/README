@@ -1,15 +1,19 @@
-# 🎲 Dice Roller - Kotlin
+# 📝 Notes App - Kotlin (SQLite + Jetpack Compose)
 
-Este é um projeto simples desenvolvido em **Kotlin** onde o usuário pode simular o lançamento de um dado.  
-A cada clique no botão, o dado é "rolado" e exibe um número aleatório entre **1 e 6** na tela.
+Este projeto é um aplicativo de **notas** desenvolvido em **Kotlin**, utilizando **SQLite** como banco de dados local e **Jetpack Compose** para a interface.  
+Com ele, é possível **criar, listar, editar e excluir notas** de maneira simples e intuitiva.
 
 ## 🚀 Funcionalidades
-- Botão para lançar o dado.
-- Geração de número aleatório de 1 a 6.
-- Interface simples e intuitiva.
-- Exibição gráfica do resultado do dado.
+- Criar novas notas com:
+  - **Título**
+  - **Conteúdo**
+  - **Pessoa responsável**
+- Listar todas as notas armazenadas no banco.
+- Editar notas existentes.
+- Excluir notas do banco.
+- Interface moderna com **Jetpack Compose**.
 
 ## 📷 Demonstração
 Aqui está uma captura de tela da aplicação:  
 
-![Screenshot da aplicação](./img/foto.png)
+![Screenshot da aplicação](./img/img.png)
