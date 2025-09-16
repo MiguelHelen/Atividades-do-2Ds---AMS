@@ -12,4 +12,4 @@ A cada clique no botão, o dado é "rolado" e exibe um número aleatório entre 
 ## 📷 Demonstração
 Aqui está uma captura de tela da aplicação:  
 
-![Screenshot da aplicação](./img/img.png)
+![Screenshot da aplicação](./img/foto.png)
